@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Falakdin Videographer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+    // Hide the lightbox overlay by default
+    $("#lightbox-overlay").hide();
+
+    // Click event for video gallery items
+    $(".lightbox-video").on("click", function(event) {
+        event.preventDefault(); // Prevent the default action of the anchor
+
+        var videoSrc = $(this).data("video"); // Get the video URL from data attribute
+        $("#lightbox-video").attr("src", videoSrc); // Set the video URL in the iframe
+        $("#lightbox-overlay").fadeIn(); // Show the lightbox overlay
+    });
+
+    // Close lightbox when clicking on the close button or outside the video
+    $("#close-lightbox, #lightbox-overlay").on("click", function() {
+        $("#lightbox-overlay").fadeOut(); // Hide the overlay
+        $("#lightbox-video").attr("src", ""); // Stop the video playback
+    });
+
+    // Prevent closing when clicking on the video itself
+    $("#lightbox-video").on("click", function(event) {
+        event.stopPropagation();
+    });
+});
+
+</script>
+<body>
+    <!-- Title Section with Background Image -->
+    <header class="title-section">
+        <h1>Arya Falakdin</h1>
+    </header>
+
+    <!-- About Section with Portrait and Bio -->
+    <section class="about">
+        <div class="portrait">
+            <img src="pic.jpg" alt="Photographer Portrait">
+        </div>
+        <div class="bio">
+            <h2>Who am i?</h2>
+            <p>With a passion for storytelling and a keen eye for visual aesthetics, I specialise in crafting compelling narratives through video editing and cinematography. With years of experience in the industry, I've had the privilege of working on diverse projects ranging from short films and commercials to music videos and documentaries. 
+
+                I approach every project with creativity, professionalism, and attention to detail. Whether you're a filmmaker, content creator, or business owner, I'm dedicated to bringing your vision to life and exceeding your expectations.
+                Whether you have a specific project in mind or need assistance in conceptualising and executing your vision, I'm here to help. Let's collaborate to create something extraordinary.</p>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="gallery">
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/YhjfWPDi3Bg">
+                <img src="https://img.youtube.com/vi/YhjfWPDi3Bg/0.jpg" alt="Video 1">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/A3ypqrsJfB0">
+                <img src="https://img.youtube.com/vi/A3ypqrsJfB0/0.jpg" alt="Video 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/5m6vR1foMH8">
+                <img src="https://img.youtube.com/vi/5m6vR1foMH8/0.jpg" alt="Video 3">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/6EmmyUzaEWg">
+                <img src="https://img.youtube.com/vi/6EmmyUzaEWg/0.jpg" alt="Video 1">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/JPvpeUxWZ-o">
+                <img src="https://img.youtube.com/vi/JPvpeUxWZ-o/0.jpg" alt="Video 2">
+            </a>
+        </div>
+      
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/8gCqtbF7XnA">
+                <img src="https://img.youtube.com/vi/8gCqtbF7XnA/0.jpg" alt="Video 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="#" class="lightbox-video" data-video="https://www.youtube.com/embed/GDzroPvIRkc">
+                <img src="https://img.youtube.com/vi/GDzroPvIRkc/0.jpg" alt="Video 2">
+            </a>
+        </div>
+        
+    </section>
+
+    <!-- Lightbox Overlay for Videos -->
+    <div id="lightbox-overlay">
+        <span id="close-lightbox">×</span>
+        <iframe id="lightbox-video" width="800" height="450" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <iframe
+    id="JotFormIFrame-243108210938856"
+    title="Fill in a few detials so we can get started"
+    onload="window.parent.scrollTo(0,0)"
+    allowtransparency="true"
+    allow="geolocation; microphone; camera; fullscreen"
+    src="https://form.jotform.com/243108210938856"
+    frameborder="0"
+    style="min-width:100%;max-width:100%;height:539px;border:none;"
+    scrolling="no"></iframe>
+ 
+  <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+  <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-243108210938856']", "https://form.jotform.com/")</script>
+    
+    <!-- Footer Section with Social Icons -->
+    <footer class="footer">
+	<p>Arya Falakdin, Copyright © 2024</p>
+        <div class="social-icons">
+		
+            <div class="social-icon">
+                <a href="https://www.fiverr.com/alpha__mega?public_mode=true" target="_blank"><img src="fiver.jpg" alt="fiver"></a>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/lazy.pix.syd" target="_blank"><img src="insta.jpg" alt="instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
