@@ -76,8 +76,8 @@ body {
 }
 
 .portrait img {
-    width: 645px;
-    height: 945px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
